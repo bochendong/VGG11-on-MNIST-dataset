@@ -6,7 +6,7 @@ ID: 20636860
 Email : dongbochen1218@icloud.com
 
 
-## For A3Q4, the version used is:
+## For this project, the version used is:
 absl-py                   0.8.1                    py37_0  
 astor                     0.8.0                    py37_0  
 astroid                   2.3.2                    py37_0  
@@ -147,36 +147,57 @@ Test accuracy, std   1  acc: 0.1026
 
 ## The Output of data_augmentation.py is:
 Epoch 1/5
+
 60000/60000 [==============================] - 766s 13ms/step - loss: 6.3248 - acc: 0.1762 - val_loss: 5.7244 - val_acc: 0.3707
+
 Epoch 2/5
+
 60000/60000 [==============================] - 847s 14ms/step - loss: 5.0810 - acc: 0.3510 - val_loss: 3.8651 - val_acc: 0.7488
+
 Epoch 3/5
+
 60000/60000 [==============================] - 788s 13ms/step - loss: 4.4732 - acc: 0.4251 - val_loss: 3.3298 - val_acc: 0.8164
+
 Epoch 4/5
+
 60000/60000 [==============================] - 1515s 25ms/step - loss: 4.0870 - acc: 0.4571 - val_loss: 2.8896 - val_acc: 0.8800
+
 Epoch 5/5
+
 60000/60000 [==============================] - 1726s 29ms/step - loss: 3.7806 - acc: 0.4900 - val_loss: 2.6328 - val_acc: 0.8947
+
 Test loss, rotated  -40  loss: 7.590001333618164
 Test accuracy, rotated  -40  acc: 0.6683
+
 Test loss, rotated  -30  loss: 6.107901028442383
 Test accuracy, rotated  -30  acc: 0.76
+
 Test loss, rotated  -20  loss: 4.893476404571533
 Test accuracy, rotated  -20  acc: 0.8366
+
 Test loss, rotated  -10  loss: 4.260469832611084
 Test accuracy, rotated  -10  acc: 0.8755
+
 Test loss, rotated  0  loss: 3.979454473114014
 Test accuracy, rotated  0  acc: 0.8936
+
 Test loss, rotated  10  loss: 4.161555628967285
 Test accuracy, rotated  10  acc: 0.8814
+
 Test loss, rotated  20  loss: 4.685032397460938
 Test accuracy, rotated  20  acc: 0.8493
+
 Test loss, rotated  30  loss: 5.587607210540772
 Test accuracy, rotated  30  acc: 0.7922
+
 Test loss, rotated  40  loss: 6.8248119606018065
 Test accuracy, rotated  40  acc: 0.714
+
 Test loss, std   0.01  loss: 2.6727857151031493
 Test accuracy, std   0.01  acc: 0.8872
+
 Test loss, std   0.1  loss: 4.026104756164551
 Test accuracy, std   0.1  acc: 0.4644
+
 Test loss, std   1  loss: 9.704185195922852
 Test accuracy, std   1  acc: 0.1599
