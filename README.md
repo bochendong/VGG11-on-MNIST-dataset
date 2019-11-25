@@ -1,8 +1,12 @@
+# VGG11 on MNIST
 Name: Bochen Dong
+
 ID: 20636860
+
 Email : dongbochen1218@icloud.com
 
-For A3Q4, the version used is:
+
+## For A3Q4, the version used is:
 absl-py                   0.8.1                    py37_0  
 astor                     0.8.0                    py37_0  
 astroid                   2.3.2                    py37_0  
@@ -84,44 +88,64 @@ yaml                      0.1.7                hc338f04_2
 zlib                      1.2.11               h1de35cc_3  
 zstd                      1.3.7                h5bba6e5_0  
 
-The Output of VGG11.py is :
+## The Output of VGG11.py is :
+
 Epoch 1/5
+
 60000/60000 [==============================] - 745s 12ms/step - loss: 1.5332 - acc: 0.4981 - val_loss: 0.7584 - val_acc: 0.7484
+
 Epoch 2/5
+
 60000/60000 [==============================] - 739s 12ms/step - loss: 0.5508 - acc: 0.8156 - val_loss: 0.4165 - val_acc: 0.8682
+
 Epoch 3/5
+
 60000/60000 [==============================] - 739s 12ms/step - loss: 0.3331 - acc: 0.8961 - val_loss: 0.2449 - val_acc: 0.9241
+
 Epoch 4/5
 60000/60000 [==============================] - 740s 12ms/step - loss: 0.2313 - acc: 0.9297 - val_loss: 0.1863 - val_acc: 0.9419
+
 Epoch 5/5
 60000/60000 [==============================] - 740s 12ms/step - loss: 0.1787 - acc: 0.9451 - val_loss: 0.1442 - val_acc: 0.9561
+
 Test loss, rotated  -40  loss: 8.65370829925537
 Test accuracy, rotated  -40  acc: 0.4599
+
 Test loss, rotated  -30  loss: 5.19091490688324
 Test accuracy, rotated  -30  acc: 0.6739
+
 Test loss, rotated  -20  loss: 2.335776023155451
 Test accuracy, rotated  -20  acc: 0.8534
+
 Test loss, rotated  -10  loss: 1.0328960903696607
 Test accuracy, rotated  -10  acc: 0.935
+
 Test loss, rotated  0  loss: 0.7679140400262552
 Test accuracy, rotated  0  acc: 0.9514
+
 Test loss, rotated  10  loss: 1.0359044186836108
 Test accuracy, rotated  10  acc: 0.9348
+
 Test loss, rotated  20  loss: 2.313044224023819
 Test accuracy, rotated  20  acc: 0.854
+
 Test loss, rotated  30  loss: 4.991883773231506
 Test accuracy, rotated  30  acc: 0.6871
+
 Test loss, rotated  40  loss: 8.535515224456788
 Test accuracy, rotated  40  acc: 0.4668
+
 Test loss, std   0.01  loss: 0.16498079838752747
 Test accuracy, std   0.01  acc: 0.9505
+
 Test loss, std   0.1  loss: 1.183865225124359
 Test accuracy, std   0.1  acc: 0.6144
+
 Test loss, std   1  loss: 7.666171592712402
 Test accuracy, std   1  acc: 0.1026
 
 
-The Output of data_augmentation.py is:
+## The Output of data_augmentation.py is:
 Epoch 1/5
 60000/60000 [==============================] - 766s 13ms/step - loss: 6.3248 - acc: 0.1762 - val_loss: 5.7244 - val_acc: 0.3707
 Epoch 2/5
