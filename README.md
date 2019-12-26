@@ -6,7 +6,7 @@ Email : dongbochen1218@icloud.com
 
 ## The Output of VGG11.py is :
 
-### Training
+### Training loss and acc
 
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
@@ -16,8 +16,8 @@ Email : dongbochen1218@icloud.com
 |4|0.2313|0.9297|0.1863|0.9419|
 |5|0.1787|0.9451|0.1442|0.9561|
 
-### Test
-#### rotate the image
+### Test loss and acc
+#### Rotate the image
 
 |rotated|loss|acc|
 |---|---|---
@@ -31,7 +31,7 @@ Email : dongbochen1218@icloud.com
 |-10|4.991|0.6871|
 |-10|8.535|0.4668|
 
-### add gaussian noise:
+### Add gaussian noise:
 |std|loss|acc|
 |---|---|---
 |0.01|0.164|0.9505
