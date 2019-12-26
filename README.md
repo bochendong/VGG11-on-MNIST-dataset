@@ -26,10 +26,10 @@ Email : dongbochen1218@icloud.com
 |-20|2.337|0.8534|
 |-10|1.032|0.935|
 |0|0.7679|0.9514|
-|-10|1.035|0.9348|
-|-10|2.313|0.854|
-|-10|4.991|0.6871|
-|-10|8.535|0.4668|
+|10|1.035|0.9348|
+|20|2.313|0.854|
+|30|4.991|0.6871|
+|40|8.535|0.4668|
 
 ### Add gaussian noise:
 |std|loss|acc|
@@ -41,61 +41,40 @@ Email : dongbochen1218@icloud.com
 
 
 ## The Output of data_augmentation.py is:
-Epoch 1/5
 
-60000/60000 [==============================] - 766s 13ms/step - loss: 6.3248 - acc: 0.1762 - val_loss: 5.7244 - val_acc: 0.3707
+### Training loss and acc
 
-Epoch 2/5
+|Epoch|loss|acc|val_loss|val_acc|
+|---|---|---|---|---
+|1|6.3248|0.1762|5.7244|0.3707|
+|2|5.0810|0.3510|3.8651|0.7488|
+|3|4.4732|0.4251|3.3298|0.8164|
+|4|4.0870|0.4571|2.8896|0.8800|
+|5|3.7806|0.4900|2.6328|0.8947|
 
-60000/60000 [==============================] - 847s 14ms/step - loss: 5.0810 - acc: 0.3510 - val_loss: 3.8651 - val_acc: 0.7488
+### Test loss and acc
+#### Rotate the image
 
-Epoch 3/5
+|rotated|loss|acc|
+|---|---|---
+|-40|7.590|0.6683|
+|-30|6.107|0.76|
+|-20|4.893|0.8366|
+|-10|4.260|0.8755|
+|0|3.979|0.8936|
+|10|4.161|0.8814|
+|20|4.685|0.8493|
+|30|5.587|0.7922|
+|40|6.824|0.714|
 
-60000/60000 [==============================] - 788s 13ms/step - loss: 4.4732 - acc: 0.4251 - val_loss: 3.3298 - val_acc: 0.8164
 
-Epoch 4/5
+### Add gaussian noise:
+|std|loss|acc|
+|---|---|---
+|0.01|2.672|0.8872
+|0.1| 4.026|0.4644
+|1| 9.704|0.1599
 
-60000/60000 [==============================] - 1515s 25ms/step - loss: 4.0870 - acc: 0.4571 - val_loss: 2.8896 - val_acc: 0.8800
-
-Epoch 5/5
-
-60000/60000 [==============================] - 1726s 29ms/step - loss: 3.7806 - acc: 0.4900 - val_loss: 2.6328 - val_acc: 0.8947
-
-Test loss, rotated  -40  loss: 7.590001333618164
-Test accuracy, rotated  -40  acc: 0.6683
-
-Test loss, rotated  -30  loss: 6.107901028442383
-Test accuracy, rotated  -30  acc: 0.76
-
-Test loss, rotated  -20  loss: 4.893476404571533
-Test accuracy, rotated  -20  acc: 0.8366
-
-Test loss, rotated  -10  loss: 4.260469832611084
-Test accuracy, rotated  -10  acc: 0.8755
-
-Test loss, rotated  0  loss: 3.979454473114014
-Test accuracy, rotated  0  acc: 0.8936
-
-Test loss, rotated  10  loss: 4.161555628967285
-Test accuracy, rotated  10  acc: 0.8814
-
-Test loss, rotated  20  loss: 4.685032397460938
-Test accuracy, rotated  20  acc: 0.8493
-
-Test loss, rotated  30  loss: 5.587607210540772
-Test accuracy, rotated  30  acc: 0.7922
-
-Test loss, rotated  40  loss: 6.8248119606018065
-Test accuracy, rotated  40  acc: 0.714
-
-Test loss, std   0.01  loss: 2.6727857151031493
-Test accuracy, std   0.01  acc: 0.8872
-
-Test loss, std   0.1  loss: 4.026104756164551
-Test accuracy, std   0.1  acc: 0.4644
-
-Test loss, std   1  loss: 9.704185195922852
-Test accuracy, std   1  acc: 0.1599
 
 ## For this project, the version used is:
 absl-py                   0.8.1                    py37_0  
