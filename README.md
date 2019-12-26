@@ -6,9 +6,12 @@ Email : dongbochen1218@icloud.com
 
 ## The Output of VGG11.py is :
 
+|Author|果冻虾仁|
+|---|---
+|E-mail|Jelly.K.Wang@qq.com
 
 |Epoch|loss|acc｜val_loss｜val_acc|
-|:-|:----|:----|:----|:----|
+|---|---|---｜---|---
 |1|1.5332|0.4981|0.7584|0.7484|
 |2|0.5508|0.8156|0.4165|0.8682|
 |3|0.3331|0.8961|0.2449|0.9241|
