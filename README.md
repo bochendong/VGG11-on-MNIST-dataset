@@ -6,9 +6,7 @@ Email : dongbochen1218@icloud.com
 
 ## The Output of VGG11.py is :
 
-|Author|果冻虾仁|
-|---|---
-|E-mail|Jelly.K.Wang@qq.com
+### Training
 
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
@@ -18,42 +16,28 @@ Email : dongbochen1218@icloud.com
 |4|0.2313|0.9297|0.1863|0.9419|
 |5|0.1787|0.9451|0.1442|0.9561|
 
+### Test
+#### rotate the image
 
-Test loss, rotated  -40  loss: 8.65370829925537
-Test accuracy, rotated  -40  acc: 0.4599
+|rotated|loss|acc|
+|---|---|---
+|-40|8.653|0.4599|
+|-30|5.190|0.6739|
+|-20|2.337|0.8534|
+|-10|1.032|0.935|
+|0|0.7679|0.9514|
+|-10|1.035|0.9348|
+|-10|2.313|0.854|
+|-10|4.991|0.6871|
+|-10|8.535|0.4668|
 
-Test loss, rotated  -30  loss: 5.19091490688324
-Test accuracy, rotated  -30  acc: 0.6739
+### add gaussian noise:
+|std|loss|acc|
+|---|---|---
+|0.01|0.164|0.9505
+|0.1|1.183|0.6144
+|1|7.666|0.1026
 
-Test loss, rotated  -20  loss: 2.335776023155451
-Test accuracy, rotated  -20  acc: 0.8534
-
-Test loss, rotated  -10  loss: 1.0328960903696607
-Test accuracy, rotated  -10  acc: 0.935
-
-Test loss, rotated  0  loss: 0.7679140400262552
-Test accuracy, rotated  0  acc: 0.9514
-
-Test loss, rotated  10  loss: 1.0359044186836108
-Test accuracy, rotated  10  acc: 0.9348
-
-Test loss, rotated  20  loss: 2.313044224023819
-Test accuracy, rotated  20  acc: 0.854
-
-Test loss, rotated  30  loss: 4.991883773231506
-Test accuracy, rotated  30  acc: 0.6871
-
-Test loss, rotated  40  loss: 8.535515224456788
-Test accuracy, rotated  40  acc: 0.4668
-
-Test loss, std   0.01  loss: 0.16498079838752747
-Test accuracy, std   0.01  acc: 0.9505
-
-Test loss, std   0.1  loss: 1.183865225124359
-Test accuracy, std   0.1  acc: 0.6144
-
-Test loss, std   1  loss: 7.666171592712402
-Test accuracy, std   1  acc: 0.1026
 
 
 ## The Output of data_augmentation.py is:
