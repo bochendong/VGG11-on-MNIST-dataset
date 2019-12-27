@@ -2,7 +2,10 @@
 Name: Bochen Dong
 
 Email : dongbochen1218@icloud.com
+## Detail:
+Train a VGG11 net on the MNIST dataset.
 
+Note that our input dimension 28 × 28, and I resized each image in MNIST to 32 × 32
 
 ## The Output of VGG11.py is :
 
