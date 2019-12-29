@@ -10,14 +10,10 @@ Note that in this project, my input dimension is different from the VGG paper. S
 ConvNet configurations:
 <p align="center">
 	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/VGG11.png"
-        width="500" height="800">
+        width="500" height="650">
 	<p align="center">
 </p>
-<p align="center">
-	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/a31.png"
-        width="300" height="300">
-	<p align="center">
-</p>
+
 
 ### Resize to 32 * 32
 ```Python
@@ -85,6 +81,16 @@ model.fit(x_train, y_train, batch_size=batch_size, epochs=5, verbose=1, validati
 
 Note that we use epochs = 5 here
 
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_acc.png"
+        width="300" height="300">
+	<p align="center">
+</p>
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_loss.png"
+        width="300" height="300">
+	<p align="center">
+</p>
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
 |1|1.5332|0.4981|0.7584|0.7484|
@@ -106,6 +112,11 @@ for i, x in enumerate(x_test):
 ```
 
 ### Test loss and accuracy vs the degree of rotation
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/r_test.png"
+        width="300" height="300">
+	<p align="center">
+</p>
 |rotated|loss|acc|
 |---|---|---
 |-40|8.653|0.4599|
@@ -130,7 +141,11 @@ for i, x in enumerate(x_test):
  ```
  
 ### Test loss and accuracy vs Gaussian noise
-
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/v_test.png"
+        width="300" height="300">
+	<p align="center">
+</p>
 |std|loss|acc|
 |---|---|---
 |0.01|0.164|0.9505
