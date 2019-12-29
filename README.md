@@ -83,14 +83,12 @@ Note that we use epochs = 5 here
 
 <p align="center">
 	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_acc.png"
-        width="450" height="300">
-	<p align="center">
-</p>
-<p align="center">
+        width="350" height="300">
 	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_loss.png"
-        width="450" height="300">
+        width="350" height="300">
 	<p align="center">
 </p>
+
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
 |1|1.5332|0.4981|0.7584|0.7484|
@@ -117,6 +115,7 @@ for i, x in enumerate(x_test):
         width="450" height="300">
 	<p align="center">
 </p>
+
 |rotated|loss|acc|
 |---|---|---
 |-40|8.653|0.4599|
@@ -146,6 +145,7 @@ for i, x in enumerate(x_test):
         width="450" height="300">
 	<p align="center">
 </p>
+
 |std|loss|acc|
 |---|---|---
 |0.01|0.164|0.9505
