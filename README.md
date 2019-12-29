@@ -13,7 +13,11 @@ ConvNet configurations:
         width="500" height="800">
 	<p align="center">
 </p>
-
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/a31.png"
+        width="300" height="300">
+	<p align="center">
+</p>
 
 ### Resize to 32 * 32
 ```Python
