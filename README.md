@@ -8,7 +8,7 @@ Train a VGG11 net on the MNIST dataset.
 ConvNet configurations:
 
 
-Note that in this project, our input dimension is different from the VGG paper. You need to resize each image in MNIST from its original size 28 × 28 to 32 × 32
+Note that in this project, my input dimension is different from the VGG paper. So I resized each image in MNIST from its original size 28 × 28 to 32 × 32
 
 ### Resize to 32 * 32
 ```Python
