@@ -163,7 +163,7 @@ for i, x in enumerate(x_test):
 </p>
 
 ## Data_augmentation:
-Have 50% probability to rotate the image with random degree in (40, -30, ... 30, 40) and 50% probability to add a random gaussian noice in (0.01, 0.1, 1). Then add L2 regularization with constant 0.005 to all conv layers (which is used in [paper](https://arxiv.org/pdf/1409.1556.pdf))
+Have 50% probability to rotate the image with random degree in (40, -30, ... 30, 40) and 50% probability to add a random gaussian noice in (0.01, 0.1, 1). Then add L2 regularization with constant 0.005 to all conv layers (which is used in this [paper](https://arxiv.org/pdf/1409.1556.pdf))
 
 ### Add data augmentation to training set:
 ```Python
@@ -181,21 +181,6 @@ for x in x_train:
 
 x_train = np.asarray(temp)
 ```
-
-<!--
-## The Output of data_augmentation.py is:-->
-
-<!--### Training and test loss, acc vs the number of epochs-->
-<!--
-|Epoch|loss|acc|val_loss|val_acc|
-|---|---|---|---|---
-|1|6.3248|0.1762|5.7244|0.3707|
-|2|5.0810|0.3510|3.8651|0.7488|
-|3|4.4732|0.4251|3.3298|0.8164|
-|4|4.0870|0.4571|2.8896|0.8800|
-|5|3.7806|0.4900|2.6328|0.8947|-->
-
-
 ### Test loss and accuracy vs the degree of rotation
 |rotated|loss|acc|
 |---|---|---
@@ -217,6 +202,21 @@ x_train = np.asarray(temp)
 |0.1| 4.026|0.4644
 |1| 9.704|0.1599
 
+### Add data augmentation vs did not add data augmentation:
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/r_test.png"
+        width="400" height="300">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/r_acc2.png"
+        width="400" height="300">
+<p align="center">
+</p>
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/v_test.png"
+        width="400" height="300">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/v_acc2.png"
+        width="400" height="300">
+<p align="center">
+</p>	
 ## For this project, the version used is:
 |name|version|type|
 |---|---|---
