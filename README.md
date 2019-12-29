@@ -84,7 +84,7 @@ Note that we use epochs = 5 here
 |4|0.2313|0.9297|0.1863|0.9419|
 |5|0.1787|0.9451|0.1442|0.9561|
 
-### Generate the rotated test set which each image was rotated:
+### Generate the rotated test set by rotating each image:
 
 ```Python
 temp = []
@@ -109,7 +109,7 @@ for i, x in enumerate(x_test):
 |30|4.991|0.6871|
 |40|8.535|0.4668|
 
-### Generate the Gaussian test set which each image was added Gaussian noise:
+### Generate the Gaussian test set by adding Gaussian noise to each image:
 
 ```Python
 for i, x in enumerate(x_test):
