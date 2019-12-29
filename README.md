@@ -29,6 +29,8 @@ x_test = x_test.reshape(x_test.shape[0], 32, 32, 1)
 
 ### Create model :
 ```Python
+model = Sequential()
+
 model.add(Conv2D(64, kernel_size=(3, 3),activation='relu',padding='same',input_shape = (32, 32, 1)))
 
 model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -64,10 +66,16 @@ model.add(Dense(4096, activation='relu'))
 model.add(Dense(1000, activation='relu'))
 
 model.add(Dense(10, activation='softmax'))
-model = Sequential()
+
+model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adam(lr=0.00001), metrics=['accuracy'])
+
+model.fit(x_train, y_train, batch_size=batch_size, epochs=5, verbose=1, validation_data=(x_test, y_test))
  
 ```
-### Training and test loss, accuracy vs the number of epochs
+### Number of epochs vs Training and test loss, accuracy
+
+Note that we use epochs = 5 here
+
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
 |1|1.5332|0.4981|0.7584|0.7484|
@@ -76,8 +84,8 @@ model = Sequential()
 |4|0.2313|0.9297|0.1863|0.9419|
 |5|0.1787|0.9451|0.1442|0.9561|
 
-### Test loss and accuracy vs the degree of rotation
-#### Rotate the image:
+### Generate the rotated test set which each image was rotated:
+
 ```Python
 temp = []
 for i, x in enumerate(x_test):
@@ -87,6 +95,8 @@ for i, x in enumerate(x_test):
 	for j, rotation in enumerate(rotations):
 		x_test_rotated[j].append(np.array(Image.fromarray(x).rotate(rotation)))
 ```
+
+### Test loss and accuracy vs the degree of rotation
 |rotated|loss|acc|
 |---|---|---
 |-40|8.653|0.4599|
@@ -98,7 +108,9 @@ for i, x in enumerate(x_test):
 |20|2.313|0.854|
 |30|4.991|0.6871|
 |40|8.535|0.4668|
-#### Add gaussian noise to the image:
+
+### Generate the Gaussian test set which each image was added Gaussian noise:
+
 ```Python
 for i, x in enumerate(x_test):
 	for j, std in enumerate(noise):
@@ -107,7 +119,9 @@ for i, x in enumerate(x_test):
 
 		x_test_noise[j].append(x)
  ```
+ 
 ### Test loss and accuracy vs Gaussian noise
+
 |std|loss|acc|
 |---|---|---
 |0.01|0.164|0.9505
