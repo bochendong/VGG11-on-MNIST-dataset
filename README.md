@@ -88,7 +88,7 @@ Note that we use epochs = 5 here
 |3|0.3331|0.8961|0.2449|0.9241|
 |4|0.2313|0.9297|0.1863|0.9419|
 |5|0.1787|0.9451|0.1442|0.9561|
-
+#### Plot
 <p align="center">
 	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_acc.png"
         width="400" height="300">
@@ -110,11 +110,6 @@ for i, x in enumerate(x_test):
 ```
 
 ### Test loss and accuracy vs the degree of rotation
-<p align="center">
-	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/r_test.png"
-        width="450" height="300">
-	<p align="center">
-</p>
 
 |rotated|loss|acc|
 |---|---|---
@@ -127,6 +122,12 @@ for i, x in enumerate(x_test):
 |20|2.313|0.854|
 |30|4.991|0.6871|
 |40|8.535|0.4668|
+#### Plot
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/r_test.png"
+        width="450" height="300">
+	<p align="center">
+</p>
 
 ### Generate the Gaussian test set by adding Gaussian noise to each image:
 
@@ -140,11 +141,6 @@ for i, x in enumerate(x_test):
  ```
  
 ### Test loss and accuracy vs Gaussian noise
-<p align="center">
-	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/v_test.png"
-        width="450" height="300">
-	<p align="center">
-</p>
 
 |std|loss|acc|
 |---|---|---
@@ -152,7 +148,12 @@ for i, x in enumerate(x_test):
 |0.1|1.183|0.6144
 |1|7.666|0.1026
 
-
+#### Plot
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/v_test.png"
+        width="450" height="300">
+	<p align="center">
+</p>
 
 ## The Output of data_augmentation.py is:
 
