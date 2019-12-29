@@ -10,7 +10,7 @@ Note that in this project, my input dimension is different from the VGG paper. S
 ConvNet configurations:
 <p align="center">
 	<img src="https://github.com/bochendong/Machine-learning/raw/master/image/VGG11.png"
-        width="600" height="1000">
+        width="500" height="800">
 	<p align="center">
 </p>
 
