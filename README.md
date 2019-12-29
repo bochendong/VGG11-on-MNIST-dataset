@@ -162,21 +162,41 @@ for i, x in enumerate(x_test):
 	<p align="center">
 </p>
 
-## The Output of data_augmentation.py is:
+## Data_augmentation:
+Have 50% probability to rotate the image with random degree in (40, -30, ... 30, 40) and 50% probability to add a random gaussian noice in (0.01, 0.1, 1). Then add L2 regularization with constant 0.005 to all conv layers (which is used in [paper](https://arxiv.org/pdf/1409.1556.pdf))
 
-### Training and test loss, acc vs the number of epochs
+### Add data augmentation to training set:
+```Python
+temp = []
+for x in x_train:
+	if random.random() >= 0.5:
+		rand_rot = rotations[random.randint(0, 8)]
+		x = np.array(Image.fromarray(x).rotate(rand_rot))
 
+	if random.random() >= 0.5:
+		rand_var = noise [random.randint(0, 2)]
+		x = skimage.util.random_noise(image = x, mode= 'gaussian', clip=True, mean = 0.0, var = rand_var)
+	
+	temp.append(np.array(Image.fromarray(x).resize((32, 32))))
+
+x_train = np.asarray(temp)
+```
+
+<!--
+## The Output of data_augmentation.py is:-->
+
+<!--### Training and test loss, acc vs the number of epochs-->
+<!--
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
 |1|6.3248|0.1762|5.7244|0.3707|
 |2|5.0810|0.3510|3.8651|0.7488|
 |3|4.4732|0.4251|3.3298|0.8164|
 |4|4.0870|0.4571|2.8896|0.8800|
-|5|3.7806|0.4900|2.6328|0.8947|
+|5|3.7806|0.4900|2.6328|0.8947|-->
 
-### Test loss and acc
-#### Rotate the image
 
+### Test loss and accuracy vs the degree of rotation
 |rotated|loss|acc|
 |---|---|---
 |-40|7.590|0.6683|
@@ -190,13 +210,12 @@ for i, x in enumerate(x_test):
 |40|6.824|0.714|
 
 
-### Add gaussian noise:
+### Test loss and accuracy vs Gaussian noise
 |std|loss|acc|
 |---|---|---
 |0.01|2.672|0.8872
 |0.1| 4.026|0.4644
 |1| 9.704|0.1599
-
 
 ## For this project, the version used is:
 |name|version|type|
