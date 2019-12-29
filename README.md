@@ -217,6 +217,7 @@ x_train = np.asarray(temp)
         width="400" height="300">
 <p align="center">
 </p>	
+
 ## For this project, the version used is:
 |name|version|type|
 |---|---|---
