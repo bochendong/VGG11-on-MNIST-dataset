@@ -5,8 +5,15 @@ Email : dongbochen1218@icloud.com
 ## Detail:
 Train a VGG11 net on the MNIST dataset.
 
-Note that our input dimension 28 × 28, and I resized each image in MNIST to 32 × 32
+ConvNet configurations:
 
+
+Note that in this project, our input dimension is different from the VGG paper. You need to resize each image in MNIST from its original size 28 × 28 to 32 × 32
+
+'''Python
+x_train = x_train.reshape(x_train.shape[0], 32, 32, 1)
+x_test = x_test.reshape(x_test.shape[0], 32, 32, 1)
+'''
 ## The Output of VGG11.py is :
 
 ### Training loss and acc
