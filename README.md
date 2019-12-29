@@ -5,10 +5,10 @@ Email : dongbochen1218@icloud.com
 ## Detail:
 Train a VGG11 net on the MNIST dataset.
 
-ConvNet configurations:
-
-
 Note that in this project, my input dimension is different from the VGG paper. So I resized each image in MNIST from its original size 28 × 28 to 32 × 32
+
+ConvNet configurations:
+![VGG11](https://github.com/bochendong/Machine-learning/raw/master/image/VGG11.png)
 
 ### Resize to 32 * 32
 ```Python
