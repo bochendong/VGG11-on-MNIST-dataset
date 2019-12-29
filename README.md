@@ -81,14 +81,6 @@ model.fit(x_train, y_train, batch_size=batch_size, epochs=5, verbose=1, validati
 
 Note that we use epochs = 5 here
 
-<p align="center">
-	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_acc.png"
-        width="350" height="300">
-	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_loss.png"
-        width="350" height="300">
-	<p align="center">
-</p>
-
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
 |1|1.5332|0.4981|0.7584|0.7484|
@@ -96,6 +88,14 @@ Note that we use epochs = 5 here
 |3|0.3331|0.8961|0.2449|0.9241|
 |4|0.2313|0.9297|0.1863|0.9419|
 |5|0.1787|0.9451|0.1442|0.9561|
+
+<p align="center">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_acc.png"
+        width="400" height="300">
+	<img src="https://github.com/bochendong/VGG11-on-MNIST-dataset/raw/master/image/train_loss.png"
+        width="400" height="300">
+<p align="center">
+</p>
 
 ### Generate the rotated test set by rotating each image:
 
