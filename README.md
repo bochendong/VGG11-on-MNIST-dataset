@@ -10,14 +10,64 @@ ConvNet configurations:
 
 Note that in this project, our input dimension is different from the VGG paper. You need to resize each image in MNIST from its original size 28 × 28 to 32 × 32
 
+### Resize to 32 * 32
 ```Python
+temp = []
+for x in x_train:
+	temp.append(np.array(Image.fromarray(x).resize((32, 32))))
+
+x_train = np.asarray(temp)
+
+for i, x in enumerate(x_test):
+	temp.append(np.array(Image.fromarray(x).resize((32, 32))))
+
+x_test = np.asarray(temp)
+
 x_train = x_train.reshape(x_train.shape[0], 32, 32, 1)
 x_test = x_test.reshape(x_test.shape[0], 32, 32, 1)
 ```
-## The Output of VGG11.py is :
 
-### Training loss and acc
+### Create model :
+```Python
+model.add(Conv2D(64, kernel_size=(3, 3),activation='relu',padding='same',input_shape = (32, 32, 1)))
 
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(128, (3, 3), activation='relu',padding='same'))
+
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(256, (3, 3), activation='relu',padding='same'))
+
+model.add(Conv2D(256, (3, 3), activation='relu',padding='same'))
+
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(512, (3, 3), activation='relu',padding='same'))
+
+model.add(Conv2D(512, (3, 3), activation='relu',padding='same'))
+
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(512, (3, 3), activation='relu',padding='same'))
+
+model.add(Conv2D(512, (3, 3), activation='relu',padding='same'))
+
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+
+model.add(Dense(4096, activation='relu'))
+
+model.add(Dense(4096, activation='relu'))
+
+model.add(Dense(1000, activation='relu'))
+
+model.add(Dense(10, activation='softmax'))
+model = Sequential()
+ 
+```
+### Training and test loss, accuracy vs the number of epochs
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
 |1|1.5332|0.4981|0.7584|0.7484|
@@ -26,9 +76,17 @@ x_test = x_test.reshape(x_test.shape[0], 32, 32, 1)
 |4|0.2313|0.9297|0.1863|0.9419|
 |5|0.1787|0.9451|0.1442|0.9561|
 
-### Test loss and acc
-#### Rotate the image
+### Test loss and accuracy vs the degree of rotation
+#### Rotate the image:
+```Python
+temp = []
+for i, x in enumerate(x_test):
+	x = np.array(Image.fromarray(x).resize((32, 32)))
+	temp.append(x)
 
+	for j, rotation in enumerate(rotations):
+		x_test_rotated[j].append(np.array(Image.fromarray(x).rotate(rotation)))
+```
 |rotated|loss|acc|
 |---|---|---
 |-40|8.653|0.4599|
@@ -40,8 +98,16 @@ x_test = x_test.reshape(x_test.shape[0], 32, 32, 1)
 |20|2.313|0.854|
 |30|4.991|0.6871|
 |40|8.535|0.4668|
+#### Add gaussian noise to the image:
+```Python
+for i, x in enumerate(x_test):
+	for j, std in enumerate(noise):
+		x = skimage.util.random_noise(image = x, mode= 'gaussian', clip=True, mean = 0.0, var = std)
+		x = np.array(Image.fromarray(x).resize((32, 32)))
 
-### Add gaussian noise:
+		x_test_noise[j].append(x)
+ ```
+### Test loss and accuracy vs Gaussian noise
 |std|loss|acc|
 |---|---|---
 |0.01|0.164|0.9505
@@ -52,7 +118,7 @@ x_test = x_test.reshape(x_test.shape[0], 32, 32, 1)
 
 ## The Output of data_augmentation.py is:
 
-### Training loss and acc
+### Training and test loss, acc vs the number of epochs
 
 |Epoch|loss|acc|val_loss|val_acc|
 |---|---|---|---|---
